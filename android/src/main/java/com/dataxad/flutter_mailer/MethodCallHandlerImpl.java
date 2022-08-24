@@ -118,7 +118,7 @@ class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler, PluginRe
             if (options.hasArgument(IS_HTML) && (boolean) options.argument(IS_HTML)) {
                 text = fromHtml((String) text);
             }
-            intent.putExtra(Intent.EXTRA_TEXT, text);
+            intent.putExtra(Intent.EXTRA_TEXT, (CharSequence) text);
 
         }
         if (options.hasArgument(RECIPIENTS)) {
